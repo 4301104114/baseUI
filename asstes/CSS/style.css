@@ -256,6 +256,7 @@ html{
   color:#fff;
   padding: 11px 20px;
   margin-top: 15px;
+  border: none;
 }
 
 .place-buyticket-btn:hover {
@@ -274,17 +275,21 @@ html{
     bottom: 0;
     left: 0; 
     background: rgba(0, 0, 0, 0.4);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
+.modal.open {
+    display: flex;
+}
 .modal-container {
     background-color: #fff;
     width: 900px;
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
+    animation:  modalFadein ease 0.5s;
 }
 
 .container-header {
@@ -301,7 +306,7 @@ html{
     margin-right: 16px;
 }
 
-.but-closed {
+.btn-closed {
     position: absolute;
     top: 0;
     right: 0;
@@ -311,7 +316,7 @@ html{
     cursor: pointer;
 }
 
-.but-closed:hover {
+.btn-closed:hover {
     opacity: 1  ;
 }
 
@@ -355,4 +360,15 @@ html{
 
 .modal-footer a {
     color: #2196F3;
+}
+
+@keyframes modalFadein {
+    from {
+       opacity: 0;
+       transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
