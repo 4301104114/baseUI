@@ -91,6 +91,7 @@ html{
     background-color: #000;
     height: 46px;
     z-index: 1;
+    overflow: hidden;
 }
 
 #nav{
@@ -145,23 +146,34 @@ html{
     font-size: 14px;
 }
 
-.search-btn  {
+
+#header .search-btn,
+#header .menu-mobile-btn   {
     position: absolute;
     right: 0;
     padding: 0 24px;
     display: inline-block;
 }
 
-.search-btn .icon-search {
+#header .icon-search,
+#header  .icon-menu {
     font-size: 20px;
     line-height: 46px;
     color: #fff;
 }
-.search-btn:hover{
+
+#header .search-btn:hover{
     background-color: #f44336;
     cursor: pointer;
 }
 
+#header .menu-mobile-btn:hover {
+    background-color: #ccc;
+}
+
+#header .menu-mobile-btn:hover .icon-menu{
+    color: #000;
+}
 #slider{
   margin-top: 46px;  
   padding-top: 50%;
@@ -193,8 +205,11 @@ html{
 
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     margin : auto;
     padding: 64px 0 112px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 /*About section*/
 #content .section-heading{
