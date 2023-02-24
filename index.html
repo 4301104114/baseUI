@@ -31,14 +31,16 @@
                 </li>
             </ul>
             <!-- End nav -->
-            <!-- Begin search -->
-            <div class="search-btn">
-                <i class="icon-search ti-search"></i>
-            </div>
-            <!-- End search  -->
+           
             <div id="mobile-menu" class="menu-mobile-btn">
                 <i class="ti-menu icon-menu"></i>
             </div>
+
+            <div class="search-btn">
+                <i class="icon-search ti-search"></i>
+            </div>
+            
+            
         </div>
 
         <div id="slider">
@@ -252,8 +254,16 @@
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
         for(var i=0; i<menuItems.length; i++ ){
             var menuItem = menuItems[i];
-            menuItem.onclick = function() {
-              header.style.height = null
+            
+             menuItem.onclick = function(event) {
+               var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('sub_nav')
+               if(isParentMenu){
+                   event.preventDefault()
+                }
+                else {
+                   header.style.height = null
+               }
+
             }
         }
 

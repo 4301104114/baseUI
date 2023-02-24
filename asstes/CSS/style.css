@@ -91,7 +91,6 @@ html{
     background-color: #000;
     height: 46px;
     z-index: 1;
-    overflow: hidden;
 }
 
 #nav{
@@ -112,7 +111,7 @@ html{
         color: #fff;
         line-height: 46px;
         padding: 0 24px;
-        display: inline-block;
+        display: block;
 }
 
 #nav>li:hover>a,
@@ -128,7 +127,7 @@ html{
    position: absolute;
    top:100%;
    background-color: #fff;
-  display: none;
+   display: none;
 }
 
 #nav>li:hover .sub_nav{
@@ -153,6 +152,13 @@ html{
     right: 0;
     padding: 0 24px;
     display: inline-block;
+}
+
+#header .menu-mobile-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
 }
 
 #header .icon-search,
