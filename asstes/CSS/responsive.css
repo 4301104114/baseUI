@@ -1,4 +1,43 @@
-@media (max-width: 739px) {
+/*Responsive for PC*/
+@media (min-width: 64em) {
+ 
+    
+}
+/*Responsive for both mobile and tablet*/
+@media (max-width: 63.9375em){
+    .btn {
+        padding: 16px 20px; 
+        font-size: 18px;
+    }
+    .contact-form .form-control {
+        padding: 15px;
+        font-size: 18px;
+    }
+    .contact-info {
+        line-height: 2;
+    }
+
+    #footer .socail-list {
+        font-size: 34px;
+    }
+    #footer .socail-list a {
+        margin: 0 8px;
+    }
+    #footer .copyright a {
+        padding: 12px 0;
+        display: inline-block;
+    }
+    #footer .contact-submit-btn {
+        font-size: 18px ;
+    }
+}
+/*Responsive for tablet*/
+@media (max-width: 63.9375em) and (min-width: 46.25em) {
+}  
+
+/*Responsive for mobile*/
+
+@media (max-width: 46.1875em) {
     #header {
         overflow: hidden;
     }
@@ -18,12 +57,28 @@
     #nav>li:first-child {
         display: inline-block;
     }
-    #nav .sub_nav {
+    #nav>li a{
+        padding: 1px 24px;
+    } 
+    #nav>li .sub_nav {
         position: initial;
         background-color: #333;
     }
-    #nav .sub_nav  a {
+    #nav>li .sub_nav a {
         color: #fff;
+        padding: 5px 41px;
     }
-   
+    #content .member-avatar {
+        width: 60%;
+    }
+    .s-full-width,
+    .s-col-full   {
+        width: 100%;
+    }
+    #content .contact-form {
+        margin-top: 32px;
+    }
+    .s-mt-8 {
+        margin-top: 8px;
+    }
 }
